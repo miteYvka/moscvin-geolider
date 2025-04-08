@@ -69,7 +69,7 @@ const Cart = () => {
                 >
                   Очистить корзину
                 </button>
-                <button className="checkout">Оформить заказ</button>
+                
               </div>
             </>
           )}
