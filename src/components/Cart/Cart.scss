@@ -1,0 +1,123 @@
+$primary-color: #4a6fa5;
+$secondary-color: #166088;
+$accent-color: #4fc3f7;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+.cart {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+
+  .cart-toggle {
+    padding: 0.75rem 1.5rem;
+    background-color: $secondary-color;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .cart-content {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 350px;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+
+    @media (max-width: 480px) {
+      width: 300px;
+      right: -50px;
+    }
+  }
+}
+
+.cart-items {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+
+  .item-info {
+    flex: 1;
+  }
+
+  .item-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    button {
+      padding: 0.25rem 0.5rem;
+      background-color: #eee;
+      color: $dark-color;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+
+  .remove-item {
+    background: none;
+    color: #dc3545;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+
+    &:hover {
+      background: none;
+      color: darken(#dc3545, 10%);
+    }
+  }
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  border-top: 2px solid $secondary-color;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+
+  button {
+    flex: 1;
+  }
+
+  .clear-cart {
+    background-color: #dc3545;
+
+    &:hover {
+      background-color: darken(#dc3545, 10%);
+    }
+  }
+
+  .checkout {
+    background-color: #28a745;
+
+    &:hover {
+      background-color: darken(#28a745, 10%);
+    }
+  }
+}
